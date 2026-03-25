@@ -11,7 +11,7 @@ import java.beans.JavaBean;
 public class WebClientConfig {
 
     @Bean
-    @LoadBalanced // to resolve the service name via eureka so "port may change but not the name"
+    @LoadBalanced  // to resolve the service name via eureka so "port may change but not the name"
     public WebClient.Builder webClientBuilder(){
         return WebClient.builder();
     }
@@ -22,4 +22,5 @@ public class WebClientConfig {
                 .baseUrl("http://USER-SERVICE")
                 .build();
     }
+
 }

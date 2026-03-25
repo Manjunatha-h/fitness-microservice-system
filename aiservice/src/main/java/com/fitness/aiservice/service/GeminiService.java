@@ -24,6 +24,8 @@ public class GeminiService {
     }
 
     public String getAnswer(String prompt){
+
+        //request body format
         Map<String,Object> requestBody = Map.of(
                 "contents",new Object[]{
                         Map.of("parts", new Object[]{

@@ -45,6 +45,9 @@ public class RabbitMqConfig {
 }
 
 
+
+
+
 //✅  understanding (corrected clean version)
 //
 //        In config, we create Queue, Exchange, and Binding
