@@ -1,25 +1,5 @@
 spring:
   application:
     name : user-service
-
-  #PostgreSQL setup
-  datasource :
-    url: jdbc:postgresql://localhost:5432/fitness_user_db
-    username : postgres
-    password : 1234
-
-  #its is the JPA set up telling auto update the database based on the entities in java
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-server:
-  port: 8081
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
+  config:
+    import: optional:configserver:http://localhost:8888

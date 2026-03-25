@@ -1,3 +1,15 @@
 spring:
   application:
-    name: configserver
+    name: config-server
+  profiles:
+    active: native
+
+#   telling to load all config from this directory
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+server:
+  port: 8888
