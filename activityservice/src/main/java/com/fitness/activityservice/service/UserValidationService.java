@@ -19,6 +19,25 @@ public class UserValidationService {
                     .retrieve()
                     .bodyToMono(Boolean.class)
                     .block();
+
+            //Step-by-step:
+            //
+            //WebClient sees:
+            //
+            //http://USER-SERVICE/api/users/{userId}/validate
+            //
+            //It asks Eureka:
+            //
+            //“Where is USER-SERVICE?”
+            //
+            //Eureka returns:
+            //
+            //localhost:8081
+            //
+            //WebClient sends request to:
+            //
+            //http://localhost:8081/api/users/{userId}/validate
+
         }
         catch (WebClientResponseException e){
             if(e.getStatusCode() == HttpStatus.NOT_FOUND){

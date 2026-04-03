@@ -1,11 +1,9 @@
-package com.fitness.activityservice.config;
+package com.fitness.gateway.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
-
-import java.beans.JavaBean;
 
 @Configuration
 public class WebClientConfig {
@@ -24,6 +22,7 @@ public class WebClientConfig {
     }
 
 }
+
 
 //### 🔹 WebClient Configuration (Service-to-Service Communication) — Simple Explanation
 //

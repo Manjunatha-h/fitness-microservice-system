@@ -1,7 +1,6 @@
-package com.fitness.userservice.dto;
+package com.fitness.gateway.dto;
 
 import lombok.Data;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
